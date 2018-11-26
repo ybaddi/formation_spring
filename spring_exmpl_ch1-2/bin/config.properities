@@ -1,2 +1,2 @@
-data=com.springExmpl.data.produitData.java
-metier=com.springExmpl.metier.entrepriseMetier.java
+com.springExmpl.data.ServiceData
+com.springExmpl.metier.entrepriseMetier2

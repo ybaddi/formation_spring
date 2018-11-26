@@ -4,7 +4,7 @@ import com.springExmpl.data.produitData;
 import com.springExmpl.idata.IData;
 import com.springExmpl.imetier.IMetier;
 
-public class entrepriseMetier implements IMetier{
+public class entrepriseMetier2 implements IMetier{
 
 	private IData iData;
 
@@ -17,7 +17,7 @@ public class entrepriseMetier implements IMetier{
 	}
 
 	public double calculePrice() {
-		double priceTTC = iData.computePrice() + (iData.computePrice() * 0.2);
+		double priceTTC = iData.computePrice() + (iData.computePrice() * 0.1);
 		System.out.println(priceTTC);
 		return priceTTC;
 	}
