@@ -1,0 +1,5 @@
+<config>
+	<data>com.springExmpl.data.produitData</data>
+	
+	<metier>com.springExmpl.metier.entrepriseMetier2</metier>
+</config>
