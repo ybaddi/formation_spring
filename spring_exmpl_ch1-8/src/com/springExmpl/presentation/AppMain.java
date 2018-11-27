@@ -28,21 +28,27 @@ public class AppMain {
 		
 		IData produitData = (IData)	context.getBean("produitData");
 		
-		System.out.println(((ProduitData)produitData).getCreationDate());
 		
-		IData serviceData = (IData)	context.getBean("serviceData");
-		IData serviceData2 = (IData)	context.getBean("serviceData");
+		System.out.println(((ProduitData)produitData).getName());
+		System.out.println(((ProduitData)produitData).getPrice());
+		System.out.println(((ProduitData)produitData).getChaine());
+		
+		
+		
+		
+//		IData serviceData = (IData)	context.getBean("serviceData");
+//		IData serviceData2 = (IData)	context.getBean("serviceData");
 
 		
 		//System.out.println(serviceData.computePrice());
 		
 		IMetier iMetier = (IMetier)	context.getBean("entrepriseMetier");
 		
-		iMetier.setiData(serviceData);
+//		iMetier.setiData(serviceData);
 		
 		//System.out.println(serviceData.computePrice());
 		
-		System.out.println(serviceData.computePrice());
+//		System.out.println(serviceData.computePrice());
 		
 		context.close();
 		

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-3.0.xsd
+         http://www.springframework.org/schema/util
+         http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+	<!-- <bean class="com.springExmpl.data.SimpleBeanPostProcessor2"/> -->
+	<!-- <bean class="com.springExmpl.data.SimpleBeanPostProcessor"/> -->
+
+	<util:map id="idMap">
+		<entry key="key1" value="value1"></entry>
+		<entry key="key2" value="value2"></entry>
+		<entry key="key3" value="value3"></entry>
+	</util:map>
+
+	<bean id="entrepriseMetier"
+		class="com.springExmpl.metier.EntrepriseMetier"></bean>
+
+
+	<bean id="dateFormate" class="java.text.SimpleDateFormat">
+		<constructor-arg value="yyyy-MM-dd"></constructor-arg>
+
+	</bean>
+
+	<bean id="produitData" class="com.springExmpl.data.ProduitData"
+		>
+		<constructor-arg index="1" value="produit 1"></constructor-arg>
+		<constructor-arg index="0"  value="1"></constructor-arg>
+		<constructor-arg ref="idMap"></constructor-arg>
+		
+	</bean>
+	<bean id="serviceData" class="com.springExmpl.data.ServiceData"
+		init-method="initData" destroy-method="destroyData"></bean>
+
+
+	<!-- <context:annotation-config></context:annotation-config> -->
+</beans>
