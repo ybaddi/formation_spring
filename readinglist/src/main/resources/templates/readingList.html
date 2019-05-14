@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title> Reading List </title>
+    <link rel="stylesheet" href=""/>
+
+</head>
+    <body>
+
+
+    <h3>your Reading List</h3>
+    <div th:unless="${#lists.isEmpty(books)}">
+
+        <dl th:each="book : ${books}">
+            <label th:text="${book.title}" ></label>
+        </dl>
+
+    </div>
+
+    <div th:if="${#lists.isEmpty(books)}">
+        <p>Your list is EMpty </p>
+    </div>
+
+
+
+        <h3>add a Book</h3>
+    <form method="POST">
+        <label>Title:</label>
+        <input type="text" name="title" />
+
+        <label>author:</label>
+        <input type="text" name="author" />
+
+        <label>isbn:</label>
+        <input type="text" name="isbn" />
+
+        <label>description:</label>
+        <textarea cols="80" rows="50" name="description" />
+
+        <input type="submit" />
+
+    </form>
+    </body>
+
+
+</html>
